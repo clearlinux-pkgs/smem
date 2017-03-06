@@ -1,0 +1,39 @@
+From 29bf0aabb304da704f198b42ab552c1c0765ad6a Mon Sep 17 00:00:00 2001
+From: Mario Alfredo Carrillo Arevalo <mario.alfredo.c.arevalo@intel.com>
+Date: Mon, 6 Mar 2017 13:55:47 -0600
+Subject: [PATCH] Add Makefile
+
+Signed-off-by: Mario Alfredo Carrillo Arevalo <mario.alfredo.c.arevalo@intel.com>
+---
+ Makefile | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+ create mode 100644 Makefile
+
+diff --git a/Makefile b/Makefile
+new file mode 100644
+index 0000000..f664d77
+--- /dev/null
++++ b/Makefile
+@@ -0,0 +1,19 @@
++PREFIX ?= /usr
++BINDIR ?= $(DESTDIR)$(PREFIX)/bin
++DOCDIR ?= $(DESTDIR)$(PREFIX)/share/man/man8
++
++.PHONY: build
++build:
++	@echo "No files to build"
++
++.PHONY: install
++install:
++	@mkdir -p  $(BINDIR)/
++	@cp smem   $(BINDIR)/
++	@mkdir -p  $(DOCDIR)/
++	@cp smem.8 $(DOCDIR)/
++
++.PHONY: clean
++clean:
++	@rm -f $(BINDIR)/smem
++	@rm -f $(DOCDIR)/smem.8
+-- 
+2.10.0.372.g6fe1b14
+

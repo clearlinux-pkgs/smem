@@ -4,7 +4,7 @@
 #
 Name     : smem
 Version  : 1.4
-Release  : 1
+Release  : 2
 URL      : https://www.selenic.com/smem/download/smem-1.4.tar.gz
 Source0  : https://www.selenic.com/smem/download/smem-1.4.tar.gz
 Summary  : No detailed summary available
